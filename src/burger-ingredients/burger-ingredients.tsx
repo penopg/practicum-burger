@@ -1,9 +1,10 @@
 import React from 'react'
+import styles from './app-header.module.css'
 
 class BurgerIngredients extends React.Component {
 	render() {
 		return(
-			<div>burger-ingredients</div>
+			<section>burger-ingredients</section>
 		);
 	}
 }

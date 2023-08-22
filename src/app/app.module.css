@@ -1,0 +1,14 @@
+.app {
+  width: 1240px;
+  margin: auto;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+section {
+  width: 100%;
+}

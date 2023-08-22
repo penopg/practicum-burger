@@ -1,19 +1,21 @@
 import React from 'react';
-import './app.css';
+import styles from './app.module.css';
 import AppHeader from '../app-header/app-header'
 import BurgerConstructor from '../burger-constructor/burger-constructor'
 import BurgerIngredients from '../burger-ingredients/burger-ingredients'
 
 
 
-function app() {
+function App() {
   return (
-    <div className="app">
+    <div className={styles.app}>
       <AppHeader/>
-      <BurgerConstructor/>
-      <BurgerIngredients/>
+      <main className={styles.container}>
+        <BurgerConstructor/>
+        <BurgerIngredients/>
+      </main>
     </div>
   );
 }
 
-export default app;
+export default App;
