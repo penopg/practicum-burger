@@ -1,0 +1,11 @@
+h1 {
+	text-align: left;
+}
+
+.burgerSets {
+	height: calc(100vh - 300px);
+	overflow: scroll;
+	overflow-x: hidden;
+	scrollbar-width: thin;
+	scrollbar-color: red;
+}
