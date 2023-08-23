@@ -21,8 +21,7 @@ interface CardProps {
 function BurgerIngredientsSet(props) {
 
 	const cards = props.data.map((card) => {
-		console.log(card.name);
-		return (<Card {...card}></Card>);
+		return (<Card {...card} key={card._id}></Card>);
 	})
 
 	return(

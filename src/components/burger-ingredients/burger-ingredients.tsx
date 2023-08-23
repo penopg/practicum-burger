@@ -25,9 +25,9 @@ function BurgerIngredients() {
 			<h1 className='pt-10 pb-5 text text_type_main-large'>Соберите бургер</h1>
 			<BurgerTabs/>
 			<div className={styles.burgerSets}>
-				<BurgerIngredientsSet data={bunsData} setName="Булки"/>
-				<BurgerIngredientsSet data={soucesData} setName="Соусы"/>
-				<BurgerIngredientsSet data={mainsData} setName="Начинки"/>
+				<BurgerIngredientsSet key="1" data={bunsData} setName="Булки"/>
+				<BurgerIngredientsSet key="2" data={soucesData} setName="Соусы"/>
+				<BurgerIngredientsSet key="3" data={mainsData} setName="Начинки"/>
 			</div>	
 		</section>
 	);
