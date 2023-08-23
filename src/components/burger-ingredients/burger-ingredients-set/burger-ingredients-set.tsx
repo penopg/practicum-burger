@@ -24,7 +24,6 @@ function BurgerIngredientsSet(props) {
 		console.log(card.name);
 		return (<Card {...card}></Card>);
 	})
-	console.log(cards);
 
 	return(
 		<div className={styles.set}>
