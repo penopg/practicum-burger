@@ -40,7 +40,7 @@ function BurgerConstructor() {
 					<ConstructorElement
 					  type="top"
 					  isLocked={true}
-					  text={ bunsData[0].name }
+					  text={ bunsData[0].name + " (верх)" }
 					  price={ bunsData[0].price }
 					  thumbnail={ bunsData[0].image }
 					/>
@@ -52,7 +52,7 @@ function BurgerConstructor() {
 					<ConstructorElement
 					  type="bottom"
 					  isLocked={true}
-					  text={ bunsData[0].name }
+					  text={ bunsData[0].name + " (низ)"}
 					  price={ bunsData[0].price }
 					  thumbnail={ bunsData[0].image }
 					/>	
