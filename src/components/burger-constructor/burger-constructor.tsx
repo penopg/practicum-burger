@@ -20,9 +20,9 @@ function BurgerConstructor() {
 		otherElements.push(otherData[Math.floor(Math.random()*otherData.length)]);
 	}
 
-	const otherConstructorElements = otherElements.map((el) => {
+	const otherConstructorElements = otherElements.map((el, index) => {
 		return(
-			<div className={styles.mainElement}>
+			<div className={styles.mainElement} key={ index }>
 				<DragIcon type="primary" />
 				<ConstructorElement
 				  text={ el.name }
