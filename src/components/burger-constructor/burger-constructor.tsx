@@ -1,15 +1,64 @@
 import React from 'react'
 import styles from './burger-constructor.module.css'
+import {ConstructorElement, DragIcon} from '@ya.praktikum/react-developer-burger-ui-components'
+import { data } from '../../utils/data'
 
 function BurgerConstructor() {
 
-	// render() {
-		return(
-			<section>
+	const bunsData = data.filter(function(card) {
+    	return card.type == "bun"
+	})
 
-			</section>
-		);
+	const otherData = data.filter(function(card) {
+    	return card.type != "bun"
+	})
+	
+	const elementsNum = 8;
+	let otherElements = new Array;	
+	for (let i = 0; i < elementsNum; i++) {
+		otherElements.push(otherData[Math.floor(Math.random()*otherData.length)]);
 	}
-// }
+
+	const otherConstructorElements = otherElements.map((el) => {
+		return(
+			<div className={styles.mainElement}>
+				<DragIcon type="primary" />
+				<ConstructorElement
+				  text={ el.name }
+				  price={ el.price }
+				  thumbnail={ el.image }
+				/>
+			</div>
+		)
+	})
+
+	return(
+		<section className="mt-25">
+			<div className={styles.burgerContent}>
+				<div className='pl-8'>
+					<ConstructorElement
+					  type="top"
+					  isLocked={true}
+					  text={ bunsData[0].name }
+					  price={ bunsData[0].price }
+					  thumbnail={ bunsData[0].image }
+					/>
+				</div>
+				<div className={styles.mainElements}>
+					{otherConstructorElements}										
+				</div>
+				<div className='pl-8'>
+					<ConstructorElement
+					  type="bottom"
+					  isLocked={true}
+					  text={ bunsData[0].name }
+					  price={ bunsData[0].price }
+					  thumbnail={ bunsData[0].image }
+					/>	
+				</div>						
+			</div>
+		</section>
+	);
+}
 
 export default BurgerConstructor;

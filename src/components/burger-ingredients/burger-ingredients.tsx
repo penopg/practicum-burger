@@ -23,7 +23,9 @@ function BurgerIngredients() {
 	return(
 		<section>
 			<h1 className='pt-10 pb-5 text text_type_main-large'>Соберите бургер</h1>
-			<BurgerTabs/>
+			<div className='mb-10'>
+			<BurgerTabs/>				
+			</div>
 			<div className={styles.burgerSets}>
 				<BurgerIngredientsSet key="1" data={bunsData} setName="Булки"/>
 				<BurgerIngredientsSet key="2" data={soucesData} setName="Соусы"/>

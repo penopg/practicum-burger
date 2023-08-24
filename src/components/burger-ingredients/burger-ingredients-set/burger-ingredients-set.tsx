@@ -26,7 +26,7 @@ function BurgerIngredientsSet(props) {
 
 	return(
 		<div className={styles.set}>
-			<h2 className="text text_type_main-medium pt-10">{props.setName}</h2>
+			<h2 className="text text_type_main-medium">{props.setName}</h2>
 			<ul className={styles.cards}>
 			{cards}
 		
