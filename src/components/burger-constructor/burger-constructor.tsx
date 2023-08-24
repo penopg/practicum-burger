@@ -13,7 +13,8 @@ function BurgerConstructor() {
     	return card.type != "bun"
 	})
 	
-	const elementsNum = 8;
+	// Наполним рандомными элементами центральную часть бургера
+	const elementsNum = 8; 
 	let otherElements = new Array;	
 	for (let i = 0; i < elementsNum; i++) {
 		otherElements.push(otherData[Math.floor(Math.random()*otherData.length)]);
