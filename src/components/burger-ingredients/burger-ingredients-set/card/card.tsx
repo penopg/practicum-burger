@@ -1,6 +1,7 @@
 import React, {FunctionComponent} from 'react'
 import styles from './card.module.css'
 import {CurrencyIcon, Counter} from '@ya.praktikum/react-developer-burger-ui-components'
+import PropTypes from 'prop-types';
 
 
 function Card(props) {
@@ -19,6 +20,12 @@ function Card(props) {
 		</li>
 	)
 
+}
+
+Card.propTypes = {
+	image: PropTypes.string,
+	price: PropTypes.number,
+	name: PropTypes.string
 }
 
 export default Card;
