@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './burger-constructor.module.css'
-import {ConstructorElement, DragIcon} from '@ya.praktikum/react-developer-burger-ui-components'
+import {ConstructorElement, DragIcon, Button, CurrencyIcon} from '@ya.praktikum/react-developer-burger-ui-components'
 import { data } from '../../utils/data'
 
 function BurgerConstructor() {
@@ -57,6 +57,18 @@ function BurgerConstructor() {
 					  thumbnail={ bunsData[0].image }
 					/>	
 				</div>						
+			</div>
+			<div className={`${styles.order} mt-10 mr-8`} >
+				<span className="text text_type_digits-medium mr-4">610</span>
+				<CurrencyIcon type="primary" />
+				<Button 
+					htmlType="button" 
+					type="primary" 
+					size="large"
+					extraClass="ml-10"
+					>
+				  Оформить заказ
+				</Button>
 			</div>
 		</section>
 	);

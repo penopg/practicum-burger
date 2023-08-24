@@ -5,7 +5,8 @@ h1 {
 .burgerContent {
 	display: flex;
 	flex-direction: column;
-	gap: 16px;
+	row-gap: 16px;
+	column-gap: 0px;
 }
 
 .bunsElements {
@@ -16,6 +17,7 @@ h1 {
 	display: flex;
 	flex-direction: column;
 	row-gap: 16px;
+	column-gap: 0px;
 	max-height: 464px;
 	overflow: scroll;
 	overflow-x: hidden;
@@ -30,4 +32,14 @@ h1 {
 
 .mainElements div svg {
 	width: 32px;
+}
+
+.order {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.order svg {
+	transform: scale(2.0);
 }
