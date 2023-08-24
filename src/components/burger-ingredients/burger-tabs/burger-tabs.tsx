@@ -1,17 +1,13 @@
 import React, {useState} from 'react'
 import {Tab} from '@ya.praktikum/react-developer-burger-ui-components'
+import styles from './burger-tabs.module.css'
 
-// class BurgerTabs extends React.Component {
-
-  
-  
-  // render() {
 
 function BurgerTabs() {
   const [current, setCurrent] = useState('buns');
 
   return(
-    <div style={{ display: 'flex' }}>
+    <div className={styles.tabs}>
       <Tab value="buns" active={current === 'buns'} onClick={setCurrent}>
         Булки
       </Tab>
@@ -24,10 +20,5 @@ function BurgerTabs() {
     </div>
   );
 }
-
-  // return (
-  //   <>
-  //   </>
-  // )
 
 export default BurgerTabs;
