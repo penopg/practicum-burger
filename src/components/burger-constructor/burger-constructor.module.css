@@ -19,6 +19,7 @@ h1 {
 	max-height: 464px;
 	overflow: scroll;
 	overflow-x: hidden;
+	overflow-y: auto;
 }
 
 .mainElements div {
