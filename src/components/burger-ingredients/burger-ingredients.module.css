@@ -1,0 +1,8 @@
+
+.burgerSets {
+	height: calc(100vh - 340px);
+	overflow: scroll;
+	overflow-x: hidden;
+	scrollbar-width: thin;
+	scrollbar-color: red;
+}
