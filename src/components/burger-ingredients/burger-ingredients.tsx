@@ -1,9 +1,7 @@
 import React from 'react'
 import styles from './burger-ingredients.module.css'
-// import {Tab} from '@ya.praktikum/react-developer-burger-ui-components'
 import BurgerTabs from './burger-tabs/burger-tabs'
 import BurgerIngredientsSet from '../burger-ingredients/burger-ingredients-set/burger-ingredients-set'
-// import { data } from '../../utils/data'
 
 
 function BurgerIngredients({data}) {
