@@ -1,4 +1,4 @@
-import React, {FunctionComponent} from 'react'
+import React from 'react'
 import styles from './card.module.css'
 import {CurrencyIcon, Counter} from '@ya.praktikum/react-developer-burger-ui-components'
 import PropTypes from 'prop-types';
@@ -23,9 +23,9 @@ function Card(props) {
 }
 
 Card.propTypes = {
-	image: PropTypes.string,
-	price: PropTypes.number,
-	name: PropTypes.string
+	image: PropTypes.string.isRequired,
+	price: PropTypes.number.isRequired,
+	name: PropTypes.string.isRequired
 }
 
 export default Card;
