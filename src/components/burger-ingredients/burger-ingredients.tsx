@@ -3,10 +3,10 @@ import styles from './burger-ingredients.module.css'
 // import {Tab} from '@ya.praktikum/react-developer-burger-ui-components'
 import BurgerTabs from './burger-tabs/burger-tabs'
 import BurgerIngredientsSet from '../burger-ingredients/burger-ingredients-set/burger-ingredients-set'
-import { data } from '../../utils/data'
+// import { data } from '../../utils/data'
 
 
-function BurgerIngredients() {
+function BurgerIngredients({data}) {
 
 	const bunsData = data.filter(function(card) {
     	return card.type == "bun"

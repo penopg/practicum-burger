@@ -1,9 +1,9 @@
 import React from 'react'
 import styles from './burger-constructor.module.css'
 import {ConstructorElement, DragIcon, Button, CurrencyIcon} from '@ya.praktikum/react-developer-burger-ui-components'
-import { data } from '../../utils/data'
+// import { data } from '../../utils/data'
 
-function BurgerConstructor() {
+function BurgerConstructor({data}) {
 
 	const bunsData = data.filter(function(card) {
     	return card.type == "bun"
