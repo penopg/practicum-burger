@@ -34,19 +34,6 @@ function App() {
     })
   }, []);
 
-  // const fetchJson = async (url) => {
-  //   const response = await fetch(url);
-  //   return response.json();
-  // };
-
-  // const [data, setData] = useState(null);
-
-  // useEffect(() => {
-  //   fetchJson("https://norma.nomoreparties.space/api/ingredients")
-  //     .then(({ data }) => setData(data));
-  // }, []);
-
-
 
   return (
     <div className={styles.app}>

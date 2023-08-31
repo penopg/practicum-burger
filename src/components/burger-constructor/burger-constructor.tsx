@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './burger-constructor.module.css'
 import {ConstructorElement, DragIcon, Button, CurrencyIcon} from '@ya.praktikum/react-developer-burger-ui-components'
+import Modal from '../modal/modal'
+import OrderDetails from '../modal/order-details'
+
 
 function BurgerConstructor({data}) {
+
+	const [modalShow, setModalShow] = useState(false);
 
 	const bunsData = data.filter(function(card) {
     	return card.type == "bun"
@@ -31,6 +36,18 @@ function BurgerConstructor({data}) {
 			</div>
 		)
 	})
+
+	function showModal(e) {
+		e.preventDefault();
+		console.log('button clicked');
+		setModalShow(true);
+	}
+
+	const modal = (
+		<Modal header="">
+			<OrderDetails/>
+		</Modal>
+	)
 
 	return(
 		<section className="mt-25">
@@ -65,8 +82,10 @@ function BurgerConstructor({data}) {
 					type="primary" 
 					size="large"
 					extraClass="ml-10"
+					onClick={showModal}
 					>
 				  Оформить заказ
+				  {modalShow && modal}
 				</Button>
 			</div>
 		</section>
