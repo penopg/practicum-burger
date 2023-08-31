@@ -5,18 +5,20 @@ import ModalOverlay from './modal-overlay'
 import {CloseIcon} from '@ya.praktikum/react-developer-burger-ui-components'
 
 
-function Modal( {children, header} ) {
+function Modal( {children, header, onClose, isOpen} ) {
 
 	const modalRoot = document.getElementById("modal-container");
 
-
+	if (!isOpen) return null
 	return createPortal(
 		(
 			<>
 				<div className={styles.modal}>
 				<div className={`${styles.headerBlock} pt-10 pl-10 pr-10`}>
 					<h3> {header} </h3>
-					<CloseIcon type="primary" />
+					<button onClick={onClose}>
+						<CloseIcon type="primary" />
+					</button>
 				</div>
 				
 					{children}

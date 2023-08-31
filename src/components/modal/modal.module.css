@@ -16,3 +16,9 @@
 	display: flex;
 	justify-content: space-between;
 }
+
+.headerBlock button {
+	background: none;
+	border: none;
+	cursor: pointer;
+}

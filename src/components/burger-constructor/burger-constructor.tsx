@@ -7,7 +7,7 @@ import OrderDetails from '../modal/order-details'
 
 function BurgerConstructor({data}) {
 
-	const [modalShow, setModalShow] = useState(false);
+	const [isOpen, setIsOpen] = useState(false);
 
 	const bunsData = data.filter(function(card) {
     	return card.type == "bun"
@@ -37,14 +37,18 @@ function BurgerConstructor({data}) {
 		)
 	})
 
-	function showModal(e) {
-		e.preventDefault();
-		console.log('button clicked');
-		setModalShow(true);
-	}
+	// function showModal(e) {
+	// 	e.preventDefault();
+	// 	console.log('button clicked 123');
+	// 	setModalShow(true);
+	// }
 
 	const modal = (
-		<Modal header="">
+		<Modal 
+			header="" 
+			onClose={() => setIsOpen(false)}
+			isOpen={isOpen}
+			>
 			<OrderDetails/>
 		</Modal>
 	)
@@ -82,11 +86,11 @@ function BurgerConstructor({data}) {
 					type="primary" 
 					size="large"
 					extraClass="ml-10"
-					onClick={showModal}
+					onClick={() => setIsOpen(true)}
 					>
 				  Оформить заказ
-				  {modalShow && modal}
 				</Button>
+				{modal}
 			</div>
 		</section>
 	);
