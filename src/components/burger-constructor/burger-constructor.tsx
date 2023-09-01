@@ -37,12 +37,6 @@ function BurgerConstructor({data}) {
 		)
 	})
 
-	// function showModal(e) {
-	// 	e.preventDefault();
-	// 	console.log('button clicked 123');
-	// 	setModalShow(true);
-	// }
-
 	const modal = (
 		<Modal 
 			header="" 
