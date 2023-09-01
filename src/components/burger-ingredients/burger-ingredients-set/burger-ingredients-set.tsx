@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './burger-ingredients-set.module.css'
 import PropTypes from 'prop-types';
 import Card from './card/card'
+import ingredientDataProps from '../../../utils/prop-types'
 
 
 function BurgerIngredientsSet(props) {
@@ -22,22 +23,8 @@ function BurgerIngredientsSet(props) {
 }
 
 BurgerIngredientsSet.propTypes = {
-	setName: PropTypes.string,
-	data: PropTypes.arrayOf(
-		PropTypes.shape({
-			_id: PropTypes.string,
-			name: PropTypes.string,
-			type: PropTypes.string,
-			proteins: PropTypes.number,
-			fat: PropTypes.number,
-			carbohydrates: PropTypes.number,
-			calories: PropTypes.number,
-			price: PropTypes.number,
-			image: PropTypes.string,
-			image_mobile: PropTypes.string,
-			image_large: PropTypes.string,
-			__v: PropTypes.number
-	})).isRequired
+	setName: PropTypes.string.isRequired,
+	data: PropTypes.arrayOf(ingredientDataProps).isRequired
 }
 
 export default BurgerIngredientsSet;
