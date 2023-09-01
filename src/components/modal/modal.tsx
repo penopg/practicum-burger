@@ -12,39 +12,13 @@ function Modal( {children, header, onClose, isOpen} ) {
 
 	const handleEscKey = useCallback((event) => {
 		if (event.key === ESC_KEY) {
-			console.log('esc');
 			onClose();
 		}
 		}, [isOpen]);
 
-
-	// 	useEffect(() => {
-	// 		document.addEventListener('keydown', handleEscKey, false);
-	// 		console.log('add listener');
-	// 		return () => {
-	// 			console.log('remove listener');
-	// 			
-	// 		};
-	// 	}, [isOpen]);
-	// }
-
-	// useEscapeKey(false);
-
-	// const useEscapeKey = () => {
-	// 	useEffect(() => {
-	// 		document.addEventListener('keydown', handleEscKey);
-	// 		return () => {
-	// 			document.removeEventListener('keydown', handleEscKey);
-	// 		}
-	// 	}, [])
-	// }
-	
 	useEffect(() => {
-		// document.addEventListener('keydown', handleEscKey);
 		document.addEventListener('keydown', handleEscKey, false);
-		console.log('mount');
 		return () => {
-			console.log('dismount');
 			document.removeEventListener('keydown', handleEscKey, false);
 		}
 	}, [isOpen])
