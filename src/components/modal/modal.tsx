@@ -3,9 +3,11 @@ import { createPortal } from 'react-dom'
 import styles from './modal.module.css'
 import ModalOverlay from './modal-overlay'
 import {CloseIcon} from '@ya.praktikum/react-developer-burger-ui-components'
+import PropTypes from 'prop-types';
 
 
-function Modal( {children, header, onClose, isOpen} ) {
+
+export default function Modal( {children, header, onClose, isOpen} ) {
 
 	const modalRoot = document.getElementById("modal-container");
 	const ESC_KEY = 'Escape';
@@ -50,4 +52,10 @@ function Modal( {children, header, onClose, isOpen} ) {
 
 }
 
-export default Modal;
+Modal.propTypes = {
+	children: PropTypes.object.isRequired,
+	header: PropTypes.string,
+	onClose: PropTypes.func.isRequired,
+	isOpen: PropTypes.bool.isRequired	
+}
+

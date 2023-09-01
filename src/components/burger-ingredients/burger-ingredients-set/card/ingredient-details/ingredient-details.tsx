@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import styles from './ingredient-details.module.css'
-// import {CloseIcon} from '@ya.praktikum/react-developer-burger-ui-components'
+import PropTypes from 'prop-types';
 
 
 export default function IngredientDetails({ data }) {
@@ -31,3 +31,6 @@ export default function IngredientDetails({ data }) {
 	)
 }
 
+IngredientDetails.propTypes = {
+	data: PropTypes.object.isRequired
+}
