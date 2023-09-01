@@ -1,12 +1,12 @@
 .modal {
 	width: 720px;
-	height: 720px;
+/*	height: 720px;*/
 	background-color: #1C1C21;
 	position: absolute;
 	left: 0;
-	top: 0;
+	top: 300px;
 	right: 0;
-	bottom: 0;
+/*	bottom: 0;*/
 	margin: auto;
 	border-radius: 10px;
 	z-index: 1;

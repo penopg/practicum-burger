@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styles from './burger-constructor.module.css'
 import {ConstructorElement, DragIcon, Button, CurrencyIcon} from '@ya.praktikum/react-developer-burger-ui-components'
 import Modal from '../modal/modal'
-import OrderDetails from '../modal/order-details'
+import OrderDetails from './order-details/order-details'
 
 
 function BurgerConstructor({data}) {

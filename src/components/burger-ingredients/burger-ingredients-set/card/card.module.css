@@ -8,6 +8,13 @@
 	text-align: center;
 }
 
+.card button {
+	width: 100%;
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
 .price {
 	display: flex;
 	justify-content: center;
@@ -16,4 +23,8 @@
 
 .price p {
 	padding-right: 10px;
+}
+
+button p {
+	color: white;
 }

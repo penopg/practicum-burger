@@ -34,7 +34,7 @@ function Modal( {children, header, onClose, isOpen} ) {
 			<>
 				<div className={styles.modal}>
 					<div className={`${styles.headerBlock} pt-10 pl-10 pr-10`}>
-						<h3> {header} </h3>
+						<p className="text text_type_main-large"> {header} </p>
 						<button onClick={onClose}>
 							<CloseIcon type="primary" />
 						</button>

@@ -1,0 +1,31 @@
+.ingredientDetails {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+/*	width: 80%;*/
+}
+
+.ingredientDetails img {
+	width: 100%;
+
+}
+
+.ingredientDetails p {
+	text-align: center;
+}
+
+.details {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+	gap: 20px;
+	padding-left: 0;
+}
+
+.details li {
+	flex-basis: 0;
+	flex: 1 1 0px;
+	text-align: center;
+	list-style-type: none;
+}
