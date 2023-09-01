@@ -90,7 +90,7 @@ function BurgerConstructor({data}) {
 					>
 				  Оформить заказ
 				</Button>
-				{modal}
+				{isOpen && modal}
 			</div>
 		</section>
 	);
