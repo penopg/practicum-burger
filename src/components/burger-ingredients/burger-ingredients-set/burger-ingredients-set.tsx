@@ -1,4 +1,3 @@
-import React from 'react'
 import styles from './burger-ingredients-set.module.css'
 import PropTypes from 'prop-types';
 import Card from './card/card'
@@ -11,15 +10,15 @@ function BurgerIngredientsSet(props) {
 		return (<Card {...card} key={card._id}></Card>);
 	})
 
-	return(
+	return (
 		<div className={styles.set}>
 			<h2 className="text text_type_main-medium">{props.setName}</h2>
 			<ul className={styles.cards}>
-			{cards}
-		
-			</ul>		
+				{cards}
+
+			</ul>
 		</div>
-		)
+	)
 }
 
 BurgerIngredientsSet.propTypes = {

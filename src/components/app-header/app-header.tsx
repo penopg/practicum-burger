@@ -1,10 +1,14 @@
-import React from 'react'
 import styles from './app-header.module.css'
-import {Logo, BurgerIcon, ListIcon, ProfileIcon} from '@ya.praktikum/react-developer-burger-ui-components'
+import { 
+	Logo, 
+	BurgerIcon, 
+	ListIcon, 
+	ProfileIcon 
+	} from '@ya.praktikum/react-developer-burger-ui-components'
 
 
 function AppHeader() {
-	return(
+	return (
 		<header className={`text text_type_main-default`}>
 			<ul className={styles.headerList}>
 				<li>
@@ -13,21 +17,21 @@ function AppHeader() {
 							<li><a href='#'>
 								<BurgerIcon type="primary" />
 								<span>Конструктор</span>
-								</a>
+							</a>
 							</li>
 							<li><a href='#'>
 								<ListIcon type="primary" />
 								<span>Лента заказов</span>
-								</a>
+							</a>
 							</li>
 						</ul>
 					</nav>
 				</li>
-				<li className={styles.logo}><Logo/></li>
+				<li className={styles.logo}><Logo /></li>
 				<li>
 					<a href='#'>
-					<ProfileIcon type="primary" />
-					<span>Личный кабинет</span>
+						<ProfileIcon type="primary" />
+						<span>Личный кабинет</span>
 					</a>
 				</li>
 			</ul>

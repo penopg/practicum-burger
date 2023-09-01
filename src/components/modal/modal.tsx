@@ -1,13 +1,13 @@
-import React, { useEffect, useState, useCallback } from 'react'
+import { useEffect, useCallback } from 'react'
 import { createPortal } from 'react-dom'
 import styles from './modal.module.css'
 import ModalOverlay from './modal-overlay'
-import {CloseIcon} from '@ya.praktikum/react-developer-burger-ui-components'
+import { CloseIcon } from '@ya.praktikum/react-developer-burger-ui-components'
 import PropTypes from 'prop-types';
 
 
 
-export default function Modal( {children, header, onClose, isOpen} ) {
+export default function Modal({ children, header, onClose, isOpen }) {
 
 	const modalRoot = document.getElementById("modal-container");
 	const ESC_KEY = 'Escape';
@@ -16,7 +16,7 @@ export default function Modal( {children, header, onClose, isOpen} ) {
 		if (event.key === ESC_KEY) {
 			onClose();
 		}
-		}, [isOpen]);
+	}, [isOpen]);
 
 	useEffect(() => {
 		document.addEventListener('keydown', handleEscKey, false);
@@ -27,9 +27,9 @@ export default function Modal( {children, header, onClose, isOpen} ) {
 
 
 	function clickOutside() {
-		{onClose()}
+		{ onClose() }
 	}
-	
+
 	if (!isOpen) return null
 	return createPortal(
 		(
@@ -41,10 +41,10 @@ export default function Modal( {children, header, onClose, isOpen} ) {
 							<CloseIcon type="primary" />
 						</button>
 					</div>
-					
-						{children}
+
+					{children}
 				</div>
-				<ModalOverlay closeClick={clickOutside}/>
+				<ModalOverlay closeClick={clickOutside} />
 			</>
 		),
 		modalRoot!
@@ -56,6 +56,6 @@ Modal.propTypes = {
 	children: PropTypes.object.isRequired,
 	header: PropTypes.string,
 	onClose: PropTypes.func.isRequired,
-	isOpen: PropTypes.bool.isRequired	
+	isOpen: PropTypes.bool.isRequired
 }
 
