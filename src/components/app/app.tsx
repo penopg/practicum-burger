@@ -12,12 +12,6 @@ function App() {
 
   useEffect(() => {
     getIngredients()
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`${response.status}`);
-        }
-        return response.json();
-      })
       .then((data) => {
         setData(data.data);
         setError(null);
