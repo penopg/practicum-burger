@@ -3,16 +3,15 @@ import styles from "./app.module.css";
 import AppHeader from "../app-header/app-header";
 import BurgerConstructor from "../burger-constructor/burger-constructor";
 import BurgerIngredients from "../burger-ingredients/burger-ingredients";
+import { getIngredients } from "../../utils/burger-utils";
 
 function App() {
-  const DATA_SOURCE = "https://norma.nomoreparties.space/api/ingredients";
-
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(DATA_SOURCE)
+    getIngredients()
       .then((response) => {
         if (!response.ok) {
           throw new Error(`${response.status}`);
@@ -25,7 +24,6 @@ function App() {
       })
       .catch((err) => {
         setError(err.message);
-        // setData(null);
       })
       .finally(() => {
         setLoading(false);
