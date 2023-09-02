@@ -1,0 +1,12 @@
+.set {
+
+}
+
+.cards {
+	display: flex;
+	flex-wrap: wrap;
+	padding-left: 0px;
+	align-content: stretch;
+	margin-top: 24px;
+	column-gap: 24px;
+}

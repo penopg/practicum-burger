@@ -1,0 +1,45 @@
+h1 {
+	text-align: left;
+}
+
+.burgerContent {
+	display: flex;
+	flex-direction: column;
+	row-gap: 16px;
+	column-gap: 0px;
+}
+
+.bunsElements {
+
+}
+
+.mainElements {
+	display: flex;
+	flex-direction: column;
+	row-gap: 16px;
+	column-gap: 0px;
+	max-height: 464px;
+	overflow: scroll;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.mainElements div {
+	display: flex;
+/*	justify-content: stretch;*/
+	align-items: center;
+}
+
+.mainElements div svg {
+	width: 32px;
+}
+
+.order {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.order svg {
+	transform: scale(2.0);
+}

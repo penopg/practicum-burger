@@ -1,0 +1,46 @@
+import { useState, useEffect } from "react";
+import styles from "./app.module.css";
+import AppHeader from "../app-header/app-header";
+import BurgerConstructor from "../burger-constructor/burger-constructor";
+import BurgerIngredients from "../burger-ingredients/burger-ingredients";
+import { getIngredients } from "../../utils/burger-utils";
+
+function App() {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    getIngredients()
+      .then((data) => {
+        setData(data.data);
+        setError(null);
+      })
+      .catch((err) => {
+        setError(err.message);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, []);
+
+  return (
+    <div className={styles.app}>
+      <AppHeader />
+      <main className={styles.container}>
+        {loading && <div>Загружаем данные...</div>}
+        {error && (
+          <div>{`У нас проблема с загрузкой данных :( Ошибка ${error}`}</div>
+        )}
+        {data && (
+          <>
+            <BurgerIngredients data={data} />
+            <BurgerConstructor data={data} />
+          </>
+        )}
+      </main>
+    </div>
+  );
+}
+
+export default App;
